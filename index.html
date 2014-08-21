@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Beer to Burpee Calculator App Pitch</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Beer to Burpee Calculator App Pitch">
+  <meta name="author" content="kmborchert">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Beer to Burpee Calculator App Pitch</h1>
+    <h2>August 19, 2014</h2>
+    <p>kmborchert<br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>The Beer to Burpee Calculator App: What it Does</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Purpose:  The purpose of this app is to enable a user to calculate how many Burpees
+(a type of exercise) one needs to perform to burn calories consumed from drinking beer.</p>
+
+<p>The Beer to Burpee Calculator takes three user inputs...<br>
+1) The user&#39;s weight in lbs<br>
+2) Amount of 12 oz glasses of beer consumed<br>
+3) Type of beer consumed  </p>
+
+<p>And returns...<br>
+1) Calories burned per Burpee<br>
+2) Calories consumed, based on number and type of beer<br>
+3) MOST IMPORTANTLY: The number of Burpees needed to offset beer consumption  </p>
+
+<p>The app also includes instruction on proper Burpee form.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Calculating Calories Burned per Burpee</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>This calculation is one of several components of the App. The function takes the user&#39;s weight and converts it to calories burned per Burpee based on a few assumptions (outlined below).  </p>
+
+<p>Details regarding the derivation of this calculation can be found in the article: &#39;Burpee Equivalents:  Understanding Junk Food in terms of Your Favorite Exercise&#39; by Dr. Jeff Godin, found at: <a href="http://blog.spartanrace.com/burpee-equivalents-understanding-junk-food">http://blog.spartanrace.com/burpee-equivalents-understanding-junk-food</a>.</p>
+
+<pre><code class="r">cal &lt;- function(Weight) {
+    weight_kg &lt;- (Weight/2.2046)    #Convert user input Weight from lbs to kg
+    cal &lt;- weight_kg * 3.5/1000 * 5 #Calculate calories per Burpee: Assumptions
+    #     1) Each Burpee consumes 3.5 ml of O2 per kg of weight.
+    #     2) 1L of oxygen consumed = 5 kcals
+    print(cal)}
+# A user weighing 120 lbs would burn this many calories per burpee...
+cal(120)
+</code></pre>
+
+<pre><code>## [1] 0.9526
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>What the App Looks Like:</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="assets/fig/unnamed-chunk-2.png" alt="plot of chunk unnamed-chunk-2"> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Why You Should Use the Beer to Burpee Calculator</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>This App raises awareness of the relationship between beer consumption and the
+amount of exercise required to offset beer calories consumed.</p>
+
+<p>Using the calculation shown in the previous slide...</p>
+
+<p>Assuming it takes a fairly fit person 1 minute to perform 12 to 15 Burpees, it would take over 10 minutes
+of Burpees to burn the calories consumed in a single beer.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='The Beer to Burpee Calculator App: What it Does'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Calculating Calories Burned per Burpee'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='What the App Looks Like:'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Why You Should Use the Beer to Burpee Calculator'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
